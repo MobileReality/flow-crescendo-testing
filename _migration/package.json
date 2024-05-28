@@ -1,0 +1,39 @@
+{
+  "name": "flow-crescendo-testing-migration",
+  "version": "0.0.1",
+  "description": "Flow Crescendo migration testing framework",
+  "main": "index.js",
+  "scripts": {
+    "test:migration": "jest --no-watchman --watchAll=false --config=./jest.mig.config.js",
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint \"**/*.js\" --fix",
+    "esm": "cd src && node --input-type=module < ",
+    "postinstall": "cd node_modules/sdk-stable && npm i && npm run build && cd ../.."
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@types/faker": "^5.1.0",
+    "@types/jest": "^29.2.0",
+    "babel-jest": "^29.2.1",
+    "chalk": "^4.1.0",
+    "edit-json-file": "^1.8.0",
+    "faker": "^5.1.0",
+    "fs-extra": "^10.1.0",
+    "glob": "^10.3.10",
+    "jest": "^29.2.1",
+    "jest-environment-node": "^29.2.1",
+    "jest-extended": "^3.1.0",
+    "json5": "^2.2.3",
+    "lodash": "^4.17.21",
+    "microbundle": "^0.15.1",
+    "path-exists-cli": "^1.0.0",
+    "prettier": "^2.3.0",
+    "resolve": "^1.20.0",
+    "sdk-legacy": "npm:@onflow/flow-js-testing@0.5.0",
+    "sdk-stable": "github:NtTestAlert/flow-js-testing#feature/stable-cadence",
+    "testing-legacy": "file:../cadence/tests/js",
+    "testing-stable": "file:../cadence1/tests/js",
+    "ts-jest": "^29.0.3"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  debug: false,
+  keepDb: false,
+
+  legacyPath: '../../cadence',
+  basePath: '../../cadence1',
+
+  flowCmd: 'flow',
+  flowC1Cmd: 'flow-c1',
+
+  emulator: {
+    transactionFees: true,
+  },
+  deployFDNZ: true
+}

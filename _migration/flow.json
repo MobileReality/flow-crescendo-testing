@@ -1,0 +1,45 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"FlowManager": "./.cadence-stage/contracts/FlowManager.cdc",
+		"FungibleToken": "./.cadence-stage/contracts/FungibleToken.cdc",
+		"MetadataViews": "./.cadence-stage/contracts/MetadataViews.cdc",
+		"Burner": "./.cadence-stage/contracts/Burner.cdc",
+		"NonFungibleToken": "./.cadence-stage/contracts/NonFungibleToken.cdc",
+		"ViewResolver": "./.cadence-stage/contracts/ViewResolver.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "6dc6fbfdada9a5e83e6223cd9c56e1262e0fd19e6321c7c5204c9579983315b2"
+		},
+		"ft-account": {
+			"address": "ee82856bf20e2aa6",
+			"key": "6dc6fbfdada9a5e83e6223cd9c56e1262e0fd19e6321c7c5204c9579983315b2"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"FlowManager",
+				"NonFungibleToken",
+				"MetadataViews",
+				"Burner",
+				"ViewResolver"
+			],
+			"ft-account": [
+				"FungibleToken"
+			]
+		}
+	}
+}

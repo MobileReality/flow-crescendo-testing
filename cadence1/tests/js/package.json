@@ -1,0 +1,37 @@
+{
+  "name": "flow-crescendo-testing-stable",
+  "version": "0.0.1",
+  "description": "Stable Cadence contracts tests",
+  "main": "index.js",
+  "files": [
+    "src",
+    "migration.js"
+  ],
+  "scripts": {
+    "test": "jest --no-watchman --watchAll=false --ci --config=./jest.ci.config.js",
+    "test:migration": "jest --no-watchman --watchAll=false --config=./jest.mig.config.js",
+    "test:parts": "jest --no-watchman --watchAll=false",
+    "test:debug": "node --inspect --trace-warnings node_modules/.bin/jest --runInBand --testTimeout=600000",
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint \"**/*.js\" --fix",
+    "esm": "cd src && node --input-type=module < "
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@onflow/fcl": "^1.2.1-alpha.0",
+    "@onflow/flow-js-testing": "github:NtTestAlert/flow-js-testing#feature/stable-cadence",
+    "@onflow/types": "^1.0.4",
+    "@types/faker": "^5.1.0",
+    "@types/jest": "^29.2.0",
+    "babel-jest": "^29.2.1",
+    "faker": "^5.1.0",
+    "glob": "^10.3.10",
+    "jest": "^29.2.1",
+    "jest-environment-node": "^29.2.1",
+    "jest-extended": "^3.1.0",
+    "lodash": "^4.17.21",
+    "prettier": "^2.3.0",
+    "ts-jest": "^29.0.3"
+  }
+}
